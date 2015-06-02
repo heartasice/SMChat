@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		073D91EE1B1DED17009B2979 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D91ED1B1DED17009B2979 /* DBManager.m */; };
 		075E92601B1D8061000628C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 075E925F1B1D8061000628C9 /* main.m */; };
 		075E92631B1D8061000628C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 075E92621B1D8061000628C9 /* AppDelegate.m */; };
 		075E92651B1D8061000628C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 075E92641B1D8061000628C9 /* Images.xcassets */; };
@@ -26,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		073D91EC1B1DED17009B2979 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		073D91ED1B1DED17009B2979 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		075E925A1B1D8061000628C9 /* SMChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		075E925E1B1D8061000628C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		075E925F1B1D8061000628C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				075E92621B1D8061000628C9 /* AppDelegate.m */,
 				07EF85CA1B1D95DB004A243A /* XMPPManager.h */,
 				07EF85CB1B1D95DB004A243A /* XMPPManager.m */,
+				073D91EC1B1DED17009B2979 /* DBManager.h */,
+				073D91ED1B1DED17009B2979 /* DBManager.m */,
 				075E92641B1D8061000628C9 /* Images.xcassets */,
 				075E925D1B1D8061000628C9 /* Supporting Files */,
 			);
@@ -274,6 +279,7 @@
 				075E92631B1D8061000628C9 /* AppDelegate.m in Sources */,
 				075E92601B1D8061000628C9 /* main.m in Sources */,
 				07EF85CC1B1D95DB004A243A /* XMPPManager.m in Sources */,
+				073D91EE1B1DED17009B2979 /* DBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
