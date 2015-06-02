@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "SMChatMessageModel.h"
+#import "FMDB.h"
 @interface DBManager : NSObject
-
++(FMDatabaseQueue *)sharedDatabaseQueue;
++(NSInteger)addChatMessage:(SMChatMessageModel*)chatMessageModel;
 @end

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "XMPPManager.h"
+#import "DBManager.h"
 @interface AppDelegate ()
 
 @end
@@ -20,6 +21,8 @@
     // Override point for customization after application launch.
     XMPPManager *manager=[XMPPManager sharedManager];
     [manager loginWithUserName:@"eric" setPassword:@"810918"];
+    
+    [DBManager sharedDatabaseQueue];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

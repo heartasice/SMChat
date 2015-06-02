@@ -16,7 +16,8 @@
 
 #import "XMPPMessage+XEP_0184.h"
 
-
+#import "DBManager.h"
+#import "SMChatMessageModel.h"
 // Log levels: off, error, warn, info, verbose
 #if DEBUG
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
@@ -355,6 +356,21 @@ static NSString *const XMPPHOST=@"114.215.145.244";
 - (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message
 {
     DDLogVerbose(@"%@: %@", THIS_FILE, THIS_METHOD);
+    if([message isChatMessageWithBody]){
+        NSString *toUser=[message toStr];
+        NSString *fromUser=[message fromStr];
+        NSArray *tmpArr=[fromUser componentsSeparatedByString:@"/"];
+        if (tmpArr.count>1) {
+            fromUser=[tmpArr objectAtIndex:0];
+        }
+        NSString *messageBody=[message body];
+        SMChatMessageModel *model=[[SMChatMessageModel alloc]init];
+        model.fromUserId=fromUser;
+        model.toUserId=toUser;
+        model.messageBody=messageBody;
+        model.isOutGoing=1;
+        [DBManager addChatMessage:model];
+    }
     
     
 }

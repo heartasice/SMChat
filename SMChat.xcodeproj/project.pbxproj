@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		073D91EE1B1DED17009B2979 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D91ED1B1DED17009B2979 /* DBManager.m */; };
+		073D91F11B1DEFD6009B2979 /* SMChatMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D91F01B1DEFD5009B2979 /* SMChatMessageModel.m */; };
+		073D91F41B1DF4C5009B2979 /* SMRecentChatMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 073D91F31B1DF4C5009B2979 /* SMRecentChatMessageModel.m */; };
 		075E92601B1D8061000628C9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 075E925F1B1D8061000628C9 /* main.m */; };
 		075E92631B1D8061000628C9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 075E92621B1D8061000628C9 /* AppDelegate.m */; };
 		075E92651B1D8061000628C9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 075E92641B1D8061000628C9 /* Images.xcassets */; };
@@ -29,6 +31,10 @@
 /* Begin PBXFileReference section */
 		073D91EC1B1DED17009B2979 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		073D91ED1B1DED17009B2979 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		073D91EF1B1DEFD5009B2979 /* SMChatMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMChatMessageModel.h; sourceTree = "<group>"; };
+		073D91F01B1DEFD5009B2979 /* SMChatMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMChatMessageModel.m; sourceTree = "<group>"; };
+		073D91F21B1DF4C5009B2979 /* SMRecentChatMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMRecentChatMessageModel.h; sourceTree = "<group>"; };
+		073D91F31B1DF4C5009B2979 /* SMRecentChatMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMRecentChatMessageModel.m; sourceTree = "<group>"; };
 		075E925A1B1D8061000628C9 /* SMChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		075E925E1B1D8061000628C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		075E925F1B1D8061000628C9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -94,6 +100,10 @@
 				07EF85CB1B1D95DB004A243A /* XMPPManager.m */,
 				073D91EC1B1DED17009B2979 /* DBManager.h */,
 				073D91ED1B1DED17009B2979 /* DBManager.m */,
+				073D91EF1B1DEFD5009B2979 /* SMChatMessageModel.h */,
+				073D91F01B1DEFD5009B2979 /* SMChatMessageModel.m */,
+				073D91F21B1DF4C5009B2979 /* SMRecentChatMessageModel.h */,
+				073D91F31B1DF4C5009B2979 /* SMRecentChatMessageModel.m */,
 				075E92641B1D8061000628C9 /* Images.xcassets */,
 				075E925D1B1D8061000628C9 /* Supporting Files */,
 			);
@@ -278,8 +288,10 @@
 			files = (
 				075E92631B1D8061000628C9 /* AppDelegate.m in Sources */,
 				075E92601B1D8061000628C9 /* main.m in Sources */,
+				073D91F41B1DF4C5009B2979 /* SMRecentChatMessageModel.m in Sources */,
 				07EF85CC1B1D95DB004A243A /* XMPPManager.m in Sources */,
 				073D91EE1B1DED17009B2979 /* DBManager.m in Sources */,
+				073D91F11B1DEFD6009B2979 /* SMChatMessageModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
