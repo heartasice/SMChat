@@ -159,15 +159,20 @@ PODS:
 DEPENDENCIES:
   - FMDB (~> 2.5)
   - JSONModel (~> 1.1.0)
-  - JSQMessagesViewController (~> 7.1.0)
+  - JSQMessagesViewController (from `https://github.com/jessesquires/JSQMessagesViewController.git`, branch `develop`)
   - XMPPFramework (~> 3.6.4)
+
+EXTERNAL SOURCES:
+  JSQMessagesViewController:
+    :branch: develop
+    :git: https://github.com/jessesquires/JSQMessagesViewController.git
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: 94c582a5bef4bb0f51b6ebf3e1b561d9091a68ba
   CocoaLumberjack: 5e26ebef5a48962d1713ae6cb01da30384f3f14e
   FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
   JSONModel: ec77e9865236a7a09d9cf7668df6b4b328d9ec1d
-  JSQMessagesViewController: ca11f86fa68ca70835f05e169df9244147c1dc40
+  JSQMessagesViewController: d434f3cb7c8643b859af03a45234da742b0a5df7
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   XMPPFramework: 05ee0992d696217f25c78091b275eb0ed4d27c04
 
