@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "XMPPManager.h"
 #import "DBManager.h"
+#import "SMChatViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -23,6 +24,9 @@
     [manager loginWithUserName:@"eric" setPassword:@"810918"];
     
     [DBManager sharedDatabaseQueue];
+  
+    SMChatViewController *chatViewController=[[SMChatViewController alloc]init];
+    self.window.rootViewController=chatViewController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

@@ -54,5 +54,24 @@
     
     return messageId;
 }
-
++(NSArray*)getChatMessageByCurrentUserId:(NSString*)currentUserId setToUserId:(NSString*)toUserId setPageIndex:(NSNumber*)pageIndex setPageSize:(NSNumber*)pageSize{
+    FMDatabase *db=[DBManager sharedDatabase];
+    if (![db open]) {
+        return nil;
+    }
+    FMResultSet *rs=[db executeQuery:@"select * from sm_message where fromUserId=? and toUserId=? order by messageId desc limit ? offset ?",currentUserId,toUserId,pageSize,pageIndex];
+    NSMutableArray *arr=[[NSMutableArray alloc]init];
+    while ([rs next]) {
+        SMChatMessageModel *messageModel=[[SMChatMessageModel alloc]init];
+        messageModel.messageId=[rs intForColumn:@"messageId"];
+        messageModel.messageBody=[rs stringForColumn:@"messageBody"];
+        messageModel.timestamp=[rs dateForColumn:@"timestamp"];
+        messageModel.fromUserId=[rs stringForColumn:@"fromUserId"];
+        messageModel.toUserId=[rs stringForColumn:@"toUserId"];
+        messageModel.isOutGoing=@([rs intForColumn:@"isOutGoing"]);
+        [arr addObject:messageModel];
+    }
+    [db close];
+    return arr;
+}
 @end

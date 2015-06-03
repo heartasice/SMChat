@@ -365,10 +365,15 @@ static NSString *const XMPPHOST=@"114.215.145.244";
         }
         NSString *messageBody=[message body];
         SMChatMessageModel *model=[[SMChatMessageModel alloc]init];
-        model.fromUserId=fromUser;
-        model.toUserId=toUser;
+        model.fromUserId=toUser;
+        model.toUserId=fromUser;
         model.messageBody=messageBody;
-        model.isOutGoing=1;
+        model.isOutGoing=[NSNumber numberWithInteger:1];
+        NSDate *timestamp=[self getDelayStampTime:message];
+        if (!timestamp) {
+            timestamp=[NSDate date];
+        }
+        model.timestamp=timestamp;
         [DBManager addChatMessage:model];
     }
     

@@ -12,4 +12,5 @@
 @interface DBManager : NSObject
 +(FMDatabaseQueue *)sharedDatabaseQueue;
 +(NSInteger)addChatMessage:(SMChatMessageModel*)chatMessageModel;
++(NSArray*)getChatMessageByCurrentUserId:(NSString*)currentUserId setToUserId:(NSString*)toUserId setPageIndex:(NSNumber*)pageIndex setPageSize:(NSNumber*)pageSize;
 @end
